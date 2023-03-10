@@ -1,0 +1,16 @@
+.featured-events {
+  background-color: var(--background-clr-2);
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-top: 2rem;
+}
+
+.title h3 {
+  font-size: 2rem;
+  text-transform: uppercase;
+}

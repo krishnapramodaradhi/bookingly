@@ -1,0 +1,126 @@
+.navbar {
+  height: var(--navbar-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #000000;
+  color: white;
+  padding-inline: 5rem;
+  z-index: 999;
+}
+
+.logo-container {
+  position: relative;
+  font-size: 1.5rem;
+  font-family: 'Tilt Prism', cursive;
+  scale: 1.1;
+  transition: scale 0.2s ease-in;
+}
+
+.logo-container::before,
+.logo-container::after {
+  content: '';
+  position: absolute;
+  width: 2.5rem;
+  height: 1rem;
+}
+
+.logo-container::before {
+  border-top: 3px solid var(--primary-clr);
+  border-left: 3px solid var(--primary-clr);
+  top: 0;
+  transform: translate(-20%, 0%);
+}
+
+.logo-container::after {
+  border-right: 3px solid var(--accent-clr);
+  border-bottom: 3px solid var(--accent-clr);
+  bottom: 0;
+  transform: translate(-85%, 10%);
+}
+
+.logo-container:hover {
+  scale: 1.14;
+}
+
+.primary-nav,
+.secondary-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.primary-nav a {
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #f8f8f8;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.primary-nav a:hover {
+  color: var(--accent-clr);
+}
+
+.primary-nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.2rem;
+  background-color: var(--accent-clr);
+  transform: translateY(700%);
+  display: none;
+}
+
+.primary-nav a:hover::after,
+.primary-nav a:active::after {
+  display: block;
+}
+
+.secondary-nav {
+  gap: 1rem;
+}
+
+.secondary-nav a {
+  border: 1px solid white;
+  padding: 0.7rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: inherit;
+  border-color: inherit;
+}
+
+.secondary-nav li:nth-child(1) {
+  transition: background-color 0.3s ease;
+  border-radius: 50%;
+  border-color: var(--accent-clr);
+  color: var(--accent-clr);
+}
+
+.secondary-nav li:nth-child(2) {
+  transition: background-color 0.3s ease;
+  border-color: var(--primary-clr);
+  color: var(--primary-clr);
+  border-radius: 50%;
+}
+
+.secondary-nav li:nth-child(1):hover {
+  background-color: var(--accent-clr);
+  border-radius: 50%;
+  color: white;
+}
+
+.secondary-nav li:nth-child(2):hover {
+  background-color: var(--primary-clr);
+  border-radius: 50%;
+  color: white;
+}

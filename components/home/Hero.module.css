@@ -1,0 +1,84 @@
+.hero {
+  position: relative;
+  background-color: black;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0 0 0 0;
+  background-color: #000000b9;
+  z-index: 2;
+}
+
+.hero > * {
+  z-index: 99;
+  color: #fafafa;
+}
+
+.date-location-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.date-container,
+.location-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+}
+
+.date-container > svg,
+.location-container > svg {
+  vertical-align: middle;
+  color: var(--accent-clr);
+  font-size: 1.3rem;
+}
+
+.hero h1 {
+  font-size: 4.5rem;
+  width: 25ch;
+  text-align: center;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.call-to-action {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--accent-clr);
+  color: var(--accent-clr);
+  background-color: transparent;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  margin-top: 2rem;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease-in, color 0.3s ease-in,
+    transform 0.1s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 600;
+}
+
+.call-to-action:hover {
+  background-color: var(--accent-clr);
+  color: white;
+}
+
+.call-to-action:active {
+  transform: translateY(5%);
+}
