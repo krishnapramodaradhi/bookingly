@@ -80,3 +80,21 @@ body {
   font-family: 'Urbanist', sans-serif;
   font-weight: 400;
 }
+
+.loading {
+  content: '';
+  position: fixed;
+  inset: 4rem 0 0 0;
+  width: 100%;
+  background-color: #f53f7b6c;
+  height: .3rem;
+  background: var(--accent-clr);
+  animation: progressBar 2s infinite;
+  width: 50%;
+  z-index: 999;
+}
+
+@keyframes progressBar {
+  from { left: -50% }
+  to { left: 100% }
+}
