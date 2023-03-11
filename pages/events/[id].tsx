@@ -1,7 +1,6 @@
 import EventDetail from '@/components/events/EventDetail';
 import { prisma } from '@/server/db';
 import { GetStaticPropsContext } from 'next';
-import Head from 'next/head';
 import { FC } from 'react';
 import { EwC } from '..';
 
@@ -9,14 +8,7 @@ const EventDetailPage: FC<{ eventDetails: EwC }> = ({ eventDetails }) => {
   if (!eventDetails) {
     return <p>Loading...</p>;
   }
-  return (
-    <>
-      <Head>
-        <title>{eventDetails.title} | Bookingly</title>
-      </Head>
-      <EventDetail event={eventDetails} />
-    </>
-  );
+  return <EventDetail event={eventDetails} />;
 };
 
 export async function getStaticProps(

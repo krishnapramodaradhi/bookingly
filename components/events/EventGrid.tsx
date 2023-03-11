@@ -19,7 +19,14 @@ const EventGrid: FC<{ events: EwC[] }> = ({ events }) => {
             <div className={styles['event-card']}>
               <div className={styles.category}>{e.category.name}</div>
               <div className={styles.header}>
-                <Image src={e.imageUrl} alt={e.title} width={800} height={300} />
+                <Image
+                  src={e.imageUrl}
+                  alt={e.title}
+                  width={500}
+                  height={250}
+                  style={{ width: 'auto', height: 'auto' }}
+                  priority
+                />
               </div>
               <div className={styles.body}>
                 <h3 className={styles.title}>{e.title}</h3>

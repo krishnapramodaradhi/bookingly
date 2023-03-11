@@ -1,4 +1,5 @@
 import { EwC } from '@/pages';
+import Head from 'next/head';
 import Image from 'next/image';
 import { FC, useEffect, useRef } from 'react';
 import {
@@ -34,8 +35,20 @@ const EventDetail: FC<{ event: EwC }> = ({ event }) => {
   }, [descriptionWithBreaks]);
   return (
     <div className={styles['event-detail-grid']}>
+      <Head>
+        <title>{event.title} | Bookingly</title>
+        <meta property='description' content={event.description} />
+        <meta property='og:title' content={event.title} />
+      </Head>
       <div className={styles['img-container']}>
-        <Image src={event.imageUrl} alt={event.title} width={1400} height={600} />
+        <Image
+          src={event.imageUrl}
+          alt={event.title}
+          width={1400}
+          height={600}
+          style={{ maxWidth: '100%', height: 'auto' }}
+          priority
+        />
       </div>
       <div className={styles['event-details']}>
         <h1>{event.title}</h1>

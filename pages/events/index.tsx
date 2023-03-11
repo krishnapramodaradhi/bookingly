@@ -25,6 +25,11 @@ const EventsPage: FC<{ events: EwC[]; categories: Category[] }> = ({
     <>
       <Head>
         <title>Events around you | Bookingly</title>
+        <meta
+          property='description'
+          content='Look for the most awesome happenings and events around you'
+        />
+        <meta property='og:title' content='Events around you' />
       </Head>
       <CategoryFilter
         categories={categories}
