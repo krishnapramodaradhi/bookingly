@@ -37,7 +37,7 @@ const EventDetail: FC<{ event: EwC }> = ({ event }) => {
     <div className={styles['event-detail-grid']}>
       <Head>
         <title>{event.title} | Bookingly</title>
-        <meta property='description' content={event.description} />
+        <meta name='description' content={event.description} />
         <meta property='og:title' content={event.title} />
       </Head>
       <div className={styles['img-container']}>

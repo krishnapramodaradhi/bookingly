@@ -16,7 +16,7 @@ const HomePage: FC<{ featuredEvents: EwC[]; mostRecentEvent: EwC }> = ({
       <Head>
         <title>Bookingly</title>
         <meta
-          property='description'
+          name='description'
           content='Find all the best places, events and happening around you'
         />
         <meta property='og:title' content='Bookingly' />
