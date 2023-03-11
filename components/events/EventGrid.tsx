@@ -1,4 +1,5 @@
 import { EwC } from '@/pages';
+import Image from 'next/image';
 import Link from 'next/link';
 import { FC } from 'react';
 import { FaRupeeSign } from 'react-icons/fa';
@@ -18,7 +19,7 @@ const EventGrid: FC<{ events: EwC[] }> = ({ events }) => {
             <div className={styles['event-card']}>
               <div className={styles.category}>{e.category.name}</div>
               <div className={styles.header}>
-                <img src={e.imageUrl} alt={e.title} />
+                <Image src={e.imageUrl} alt={e.title} width={800} height={300} />
               </div>
               <div className={styles.body}>
                 <h3 className={styles.title}>{e.title}</h3>

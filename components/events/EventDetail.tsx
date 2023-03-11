@@ -1,4 +1,5 @@
 import { EwC } from '@/pages';
+import Image from 'next/image';
 import { FC, useEffect, useRef } from 'react';
 import {
   FiCalendar,
@@ -30,11 +31,11 @@ const EventDetail: FC<{ event: EwC }> = ({ event }) => {
     if (descriptionRef.current) {
       descriptionRef.current.innerHTML = descriptionWithBreaks;
     }
-  }, []);
+  }, [descriptionWithBreaks]);
   return (
     <div className={styles['event-detail-grid']}>
       <div className={styles['img-container']}>
-        <img src={event.imageUrl} alt={event.title} />
+        <Image src={event.imageUrl} alt={event.title} width={1400} height={600} />
       </div>
       <div className={styles['event-details']}>
         <h1>{event.title}</h1>

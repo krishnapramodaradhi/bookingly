@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { FC } from 'react';
 import { FiKey, FiHeart } from 'react-icons/fi';
@@ -7,7 +8,9 @@ const Navbar: FC = () => {
   return (
     <nav className={styles.navbar}>
       <div className={styles['logo-container']}>
-        <Link href='/'>Bookingly</Link>
+        <Link href='/'>
+          <Image src='/images/drawing.webp' alt="Bookingly logo" width={160} height={50} />
+        </Link>
       </div>
       <ul role='list' className={styles['primary-nav']}>
         <li>

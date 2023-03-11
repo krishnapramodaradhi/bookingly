@@ -6,14 +6,15 @@ const CategoryFilter: FC<{
   categories: Category[];
   filterCategory: (category: string) => void;
 }> = ({ categories, filterCategory }) => {
+  const [category, setCategory] = useState('all');
+
   if (!categories) {
     return <p>Loading...</p>;
   }
-  const [category, setCategory] = useState('all');
 
-  const onCategoryClickHandler = (category: string) => {
-    setCategory(category);
-    filterCategory(category);
+  const onCategoryClickHandler = (c: string) => {
+    setCategory(c);
+    filterCategory(c);
   };
   return (
     <ul role='list' className={styles.categories}>
