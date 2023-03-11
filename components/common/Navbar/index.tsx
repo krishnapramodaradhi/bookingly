@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { FC } from 'react';
-import { FiKey, FiLock } from 'react-icons/fi';
+import { FiKey, FiHeart } from 'react-icons/fi';
 import styles from './Navbar.module.css';
 
 const Navbar: FC = () => {
@@ -23,12 +23,12 @@ const Navbar: FC = () => {
       <ul role='list' className={styles['secondary-nav']}>
         <li>
           <Link href='/login'>
-            <FiKey />
+            <FiHeart />
           </Link>
         </li>
         <li>
-          <Link href='/register'>
-            <FiLock />
+          <Link href='/favourites'>
+            <FiKey />
           </Link>
         </li>
       </ul>

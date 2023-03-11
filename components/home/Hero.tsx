@@ -1,4 +1,5 @@
 import { Event } from '@prisma/client';
+import { useRouter } from 'next/router';
 import { FC, useEffect, useRef } from 'react';
 import { FiCalendar, FiMapPin, FiChevronRight } from 'react-icons/fi';
 import styles from './Hero.module.css';
@@ -17,6 +18,10 @@ const Hero: FC<{ heroEvent: Event }> = ({ heroEvent }) => {
     }
   }, [imageUrl]);
 
+  const router = useRouter();
+  const actionHandler = () => {
+    router.push(`/events/${heroEvent.id}`);
+  };
   return (
     <section className={styles.hero} ref={heroRef}>
       <div className={styles['date-location-container']}>
@@ -30,7 +35,7 @@ const Hero: FC<{ heroEvent: Event }> = ({ heroEvent }) => {
         </div>
       </div>
       <h1>{heroEvent.title}</h1>
-      <button className={styles['call-to-action']}>
+      <button className={styles['call-to-action']} onClick={actionHandler}>
         Check it out
         <FiChevronRight size='1.2rem' />
       </button>

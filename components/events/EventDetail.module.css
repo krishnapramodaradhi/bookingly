@@ -1,0 +1,129 @@
+.event-detail-grid {
+  padding: 2rem 5rem;
+  display: grid;
+  grid-template-areas:
+    'image detail'
+    'image metadata'
+    'description metadata';
+  gap: 2rem;
+}
+
+.img-container {
+  overflow: hidden;
+  grid-area: image;
+}
+
+.img-container img {
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0.5rem;
+  aspect-ratio: 21 / 10;
+}
+
+.event-details {
+  border: 1px solid #08080823;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  height: max-content;
+  grid-area: detail;
+}
+
+.event-details:last-child {
+  align-items: flex-end;
+}
+
+.event-details h1 {
+  line-height: 1.2;
+  width: 20ch;
+}
+
+.detail-container {
+  margin-top: 1rem;
+}
+
+.date,
+.location,
+.price {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-block: 0.5rem;
+}
+
+.price > p {
+  font-size: 1.5rem;
+  color: var(--accent-clr);
+}
+
+.description {
+  grid-area: description;
+}
+
+.description h3 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.description p {
+  margin-top: 1rem;
+}
+
+.metadata {
+  border: 1px solid #08080823;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  grid-area: metadata;
+  height: max-content;
+}
+
+.guide-container {
+  margin-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.detail {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.detail p {
+  font-weight: 600;
+}
+
+.detail svg {
+  font-size: 1.5rem;
+}
+
+.action {
+  padding: 0.5rem 1.5rem;
+  text-transform: uppercase;
+  border: 1px solid var(--accent-clr);
+  background-color: var(--accent-clr);
+  border-radius: 0.3rem;
+  color: white;
+  width: 100%;
+  cursor: pointer;
+  font-weight: 600;
+  transition: box-shadow 0.3s ease-in, scale 0.3s ease-in;
+}
+
+.action:hover,
+.action:active {
+  box-shadow: 0 2px 5px #00000033;
+}
+
+.action:active {
+  scale: 0.95;
+}
+
+.fav {
+  background-color: var(--primary-clr);
+  border-color: var(--primary-clr);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
