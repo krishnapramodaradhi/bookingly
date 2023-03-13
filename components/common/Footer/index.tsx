@@ -50,7 +50,7 @@ const Footer: FC = () => {
         <p>Subscribe to our newsletter for more exciting content!!</p>
         <div>
           <input type='text' placeholder='Enter your Email' />
-          <button>
+          <button aria-label='A send button'>
             <FiSend />
           </button>
         </div>

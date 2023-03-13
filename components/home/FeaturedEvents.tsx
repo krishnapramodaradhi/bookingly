@@ -8,7 +8,7 @@ const FeaturedEvents: FC<{ events: EwC[] }> = ({ events }) => {
   return (
     <section className={styles['featured-events']}>
       <div className={styles.title}>
-        <h3>Featured Events</h3>
+        <h2>Featured Events</h2>
         <Divider />
       </div>
       <EventGrid events={events} />

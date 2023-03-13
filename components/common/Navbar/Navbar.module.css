@@ -14,12 +14,10 @@
 }
 
 .logo-container {
-  position: relative;
-  scale: 1.2;
   transition: scale 0.2s ease-in;
 }
 .logo-container:hover {
-  scale: 1.24;
+  scale: 1.04;
 }
 
 .primary-nav,

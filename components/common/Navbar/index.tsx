@@ -12,8 +12,8 @@ const Navbar: FC = () => {
           <Image
             src='/images/drawing.webp'
             alt='Bookingly logo'
-            width={120}
-            height={30}
+            width={160}
+            height={40}
           />
         </Link>
       </div>
@@ -30,12 +30,12 @@ const Navbar: FC = () => {
       </ul>
       <ul role='list' className={styles['secondary-nav']}>
         <li>
-          <Link href='/login'>
+          <Link href='/login' aria-label='Favourites link'>
             <FiHeart />
           </Link>
         </li>
         <li>
-          <Link href='/favourites'>
+          <Link href='/favourites' aria-label='Login or Register'>
             <FiKey />
           </Link>
         </li>
