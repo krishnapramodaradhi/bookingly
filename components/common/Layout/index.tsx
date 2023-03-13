@@ -1,4 +1,5 @@
 import { FC, ReactNode } from 'react';
+import Footer from '../Footer';
 import Navbar from '../Navbar';
 
 const Layout: FC<{ children: ReactNode }> = ({ children }) => {
@@ -8,6 +9,7 @@ const Layout: FC<{ children: ReactNode }> = ({ children }) => {
         <Navbar />
       </header>
       <main style={{ marginTop: 'var(--navbar-height)' }}>{children}</main>
+      <Footer />
     </>
   );
 };

@@ -49,9 +49,9 @@ const EventDetail: FC<{ event: EwC }> = ({ event }) => {
           <Image
             src={event.imageUrl}
             alt={event.title}
-            width={1400}
+            width={900}
             height={600}
-            style={{ maxWidth: '100%', height: 'auto' }}
+            style={{ width: '100%', height: 'auto' }}
             priority
           />
         </div>

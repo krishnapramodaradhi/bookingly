@@ -9,7 +9,12 @@ const Navbar: FC = () => {
     <nav className={styles.navbar}>
       <div className={styles['logo-container']}>
         <Link href='/'>
-          <Image src='/images/drawing.webp' alt="Bookingly logo" width={160} height={50} />
+          <Image
+            src='/images/drawing.webp'
+            alt='Bookingly logo'
+            width={120}
+            height={30}
+          />
         </Link>
       </div>
       <ul role='list' className={styles['primary-nav']}>

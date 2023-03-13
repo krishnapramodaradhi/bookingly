@@ -15,11 +15,11 @@
 
 .logo-container {
   position: relative;
-  scale: 1.1;
+  scale: 1.2;
   transition: scale 0.2s ease-in;
 }
 .logo-container:hover {
-  scale: 1.14;
+  scale: 1.24;
 }
 
 .primary-nav,
